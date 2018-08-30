@@ -20,26 +20,20 @@ import org.kohsuke.stapler.DataBoundSetter;
 
 public class OldDataBuilder extends Builder implements SimpleBuildStep {
     private final String first;
-    private final String second;
 
 
     @DataBoundConstructor
-    public OldDataBuilder(String first, String second) {
+    public OldDataBuilder(String first) {
         this.first = first;
-        this.second = second;
     }
 
     public String getFirst() {
         return first;
     }
 
-    public String getSecond() {
-        return second;
-    }
-
     @Override
     public void perform(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) throws InterruptedException, IOException {
-            listener.getLogger().println("First: " + first + " Second: " + second);
+            listener.getLogger().println("First: " + first);
     }
 
     @Symbol("OldData")

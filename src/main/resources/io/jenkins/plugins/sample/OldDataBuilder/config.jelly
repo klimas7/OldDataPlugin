@@ -3,7 +3,4 @@
     <f:entry title="First" field="first">
         <f:textbox />
     </f:entry>
-    <f:entry title="Second" field="second">
-        <f:textbox />
-    </f:entry>
 </j:jelly>
